@@ -7,7 +7,7 @@ python:
 env:
   global:
     # AWS_S3_MAX_AGE_SECONDS
-    - AWS_S3_MAX_AGE_SECONDS=3600
+    - AWS_S3_MAX_AGE_SECONDS=36000
 matrix:
   fast_finish: true
 cache:
