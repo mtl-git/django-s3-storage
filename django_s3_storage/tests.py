@@ -165,7 +165,7 @@ class TestS3Storage(TestCase):
         self.assertIn("?", url)
         # Ensure that the URL is accessible.
         response = self.assertUrlAccessible(url)
-        self.assertEqual(response.headers["cache-control"], "private, max-age={max_age}".format(max_age=settings.AWS_S3_MAX_AGE_SECONDS))
+        self.assertEqual(response.headers["cache-control"], "private, max-age={max_age}".format(max_age=0))
 
     def testSecureUrlIsPrivate(self):
         # Generate an insecure URL.
