@@ -32,7 +32,7 @@ class S3Storage(Storage):
     Python 3, which is kinda lame.
     """
 
-    def __init__(self, aws_region=None, aws_access_key_id=None, aws_secret_access_key=None, aws_s3_bucket_name=None, aws_s3_bucket_auth=True, aws_s3_max_age_seconds=None):
+    def __init__(self, aws_region=None, aws_access_key_id=None, aws_secret_access_key=None, aws_s3_bucket_name=None, aws_s3_bucket_auth=True, aws_s3_max_age_seconds=60*60):
         self.aws_region = aws_region or settings.AWS_REGION
         self.aws_access_key_id = aws_access_key_id or settings.AWS_ACCESS_KEY_ID
         self.aws_secret_access_key = aws_secret_access_key or settings.AWS_SECRET_ACCESS_KEY
